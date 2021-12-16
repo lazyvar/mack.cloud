@@ -1,0 +1,19 @@
+<svg width="224px" height="168px" viewBox="0 0 224 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    g {
+      stroke: black;
+    }
+    @media (prefers-color-scheme: dark) {
+      g {
+        stroke: white;
+      }
+    }
+  </style>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard" transform="translate(-19.000000, -46.000000)" stroke="#000000" stroke-width="20">
+            <g id="Group" transform="translate(29.000000, 56.000000)">
+                <path d="M157.649698,55.5057 L145.969422,55.5057 C136.332865,18.2665863 99.711032,-5.39799309 61.7120668,1.05963004 C23.7131016,7.51725317 -2.99250738,41.9438296 0.269375002,80.2662689 C3.53125738,118.588708 35.6729794,148.028661 74.2191553,148 L157.649698,148 C183.248263,148 204,127.294429 204,101.75284 C204,76.2112496 183.248263,55.5057 157.649698,55.5057 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

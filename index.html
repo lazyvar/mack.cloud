@@ -10,58 +10,63 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>mack in the cloud</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <title>Mack Hasz in the cloud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">     <link rel="icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <style>
-      a { text-decoration: none; color: inherit; }
-      a:hover { text-decoration: underline; color: inherit; }
-      body { font-family: 'Fira Code', monospace; background: #1E1F29; color: #E0DFE0; }
+      h1 a { text-decoration: none; color: inherit; }
+      h1 a:hover { text-decoration: underline; color: inherit; }
+      p a { text-decoration: underline dotted; color: rgba(0, 0, 0, 0.85); }
+      p a:hover { text-decoration: underline dotted; color: steelblue; }
+      body { font-family: 'Source Serif Pro', monospace; background: #fff8e5; color: rgba(0, 0, 0, 0.85); }
+      span { margin-right: 20px; }
+      i { color: steelblue; }
+      p { display: flex; justify-content: space-between; }
+      .all { display: flex; flex-wrap: wrap; }
+      .stuff { margin-right: 60px; }
+      .container { width: 80% }
+      @media screen and (max-width: 855px) {
+        .stuff {
+          margin-right: 0px;
+          width: 100%;
+        }
+
+        .container { width: 90% }
+      }
     </style>
   </head>
   <body>
-    <div style="text-align: center;">
-      <div style="display: inline-block; text-align: left;">
-          <img src="./assets/cloud.svg" width="150" />
-          <h2><a href="https://mack.cloud">Mack.cloud</a></h2>
-          <ul>
-            <li style="color: #D15555;">
-              <a href="https://www.linkedin.com/in/mack-hasz-060a36142/">mackHasz</a>
-            </li>
-            <li style="color: #BD93F9;">
-              <a href="https://www.github.com/lazyvar/">@lazyvar</a>
-            </li>
-            <li style="color: #80D9A7;">
-              <a href="https://gitlab.com/macnz">@macnz</a>
-            </li>
-            <li style="color: #E6A564;">
-              <a href="https://www.instagram.com/juicyripefreshsweet/">@juicyripefreshsweet</a>
-            </li>
-            <li style="color: #3AAAF4;">
-              <a href="https://www.chess.com/member/horsey4me/">@horsey4me</a>
-            </li>
-            <li style="color: #d0e842;">
-              <a href="https://www.goodreads.com/writeonread">@writeonread</a>
-            </li>
-            <li style="color: #DBD3B3;">
-              <a href="https://flickr.com/photos/165507455@N03/">¡mack!</a>
-            </li>
-            <li style="color: #FF79C6;">
-              <a href="https://hangloo.se">hangloo.se</a>
-            </li>  
-            <li style="color: #49E573;">
-              <a href="http://Outhere.social/">Outhere.social</a>
-            </li>
-            <li style="color: #8FDCEE;">
-              <a href="https://www.dailyinquirer.me/">dailyinquirer.me</a>
-            </li>  
-            <li style="color: #F1FA8C;">
-              <a href="https://www.masschat.co/">masschat.co</a>
-            </li>
-            <li style="color: #30C7CB;">
-              <a href="https://apps.apple.com/us/app/gymrats-group-challenge/id1453444814/">GymRats</a>
-            </li>
-          </ul>
+    <div class="container" style="margin: auto;">
+      <img src="./assets/cloud.svg" width="150" />
+      <h1><a href="/">Mack Hasz in the cloud</a></h1>
+      <div class="all">
+        <div class="stuff">
+          <h4><i>Socials</i></h4>
+          <p><span><strong>LinkedIn</strong></span><a class="link" href="https://www.linkedin.com/in/mack-hasz/">Mack Hasz</a></p>
+          <p><span><strong>Blog</strong></span><a class="link" href="https://hangloo.se">hangloo.se</a></p>
+          <p><span><strong>GitHub</strong></span><a class="link" href="https://www.github.com/lazyvar/">@lazyvar</a></p>
+          <p><span><strong>GitLab</strong></span><a class="link" href="https://gitlab.com/macnz/">@macnz</a></p>
+          <p><span><strong>Instagram</strong></span><a class="link" href="https://www.instagram.com/juicyripefreshsweet">@juicyripefreshsweet</a></p>
+          <p><span><strong>Chess.com</strong></span><a class="link" href="https://www.chess.com/member/horsey4me/">@horsey4me</a></p>
+          <p><span><strong>lichess</strong></span><a class="link" href="https://lichess.org/@/Objc">@ObjC</a></p>
+          <p><span><strong>Goodreads</strong></span><a class="link" href="https://www.goodreads.com/writeonread">@writeonread</a></p>
+          <p><span><strong>Flickr</strong></span><a class="link" href="https://flickr.com/photos/165507455@N03/">¡mack!</a></p>
+          <p><span><strong>AllTrails</strong></span><a class="link" href="https://www.alltrails.com/members/mack-hasz">Mack Hasz</a></p>
+        </div>
+        <div class="stuff">
+          <h4><i>Apps</i></h4>
+          <p><span><strong>Photo sharing</strong></span><a class="link" href="http://outhere.social">OutHere.social</a></p>
+          <p><span><strong>Writing prompts</strong></span><a class="link" href="https://www.dailyinquirer.me">DailyInquirer.me</a></p>
+          <p><span><strong>Crowd source search</strong></span><a class="link" href="https://www.masschat.co/">Masschat.co</a></p>
+          <p><span><strong>Group fitness challenges</strong></span><a class="link" href="https://www.gymrats.app">GymRats.app</a></p>
         </div>
       </div>
+    </div>
   </body>
 </html>
