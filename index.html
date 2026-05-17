@@ -11,84 +11,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mack Hasz in the cloud</title>
-    <link rel="preload" href="/static/fonts/source-serif-pro-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/static/fonts/source-serif-pro-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
     <style>
-      @font-face {
-        font-family: 'Source Serif Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-display: block;
-        src: url(/static/fonts/source-serif-pro-400.woff2) format('woff2');
+      :root {
+        --bg: #ffffff;
+        --ink: #13212e;
+        --dim: #9aa7b2;
+        --blue: #2f74c0;
+        --dot: #dbe1e7;
       }
-      @font-face {
-        font-family: 'Source Serif Pro';
-        font-style: normal;
-        font-weight: 700;
-        font-display: block;
-        src: url(/static/fonts/source-serif-pro-700.woff2) format('woff2');
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
       }
-      @font-face {
-        font-family: 'Varela Round';
-        font-style: normal;
-        font-weight: 400;
-        font-display: block;
-        src: url(/static/fonts/varela-round-400.woff2) format('woff2');
-      }
-      h1 a { text-decoration: none; color: inherit; }
-      h1 a:hover { text-decoration: underline; color: inherit; }
-      p a { text-decoration: underline dotted; color: rgba(0, 0, 0, 0.85); }
-      p a:hover { text-decoration: underline dotted; color: steelblue; }
-      body { font-family: 'Source Serif Pro', monospace; background: #fff8e5; color: rgba(0, 0, 0, 0.85); }
-      span { margin-right: 20px; }
-      i { color: steelblue; }
-      p { display: flex; justify-content: space-between; }
-      .all { display: flex; flex-wrap: wrap; }
-      .stuff { margin-right: 60px; }
-      .container { width: 80% }
-      @media screen and (max-width: 855px) {
-        .stuff {
-          margin-right: 0px;
-          width: 100%;
-        }
+      .wrap { max-width: 560px; margin: 0 auto; padding: 14vh 28px 16vh; }
 
-        .container { width: 90% }
+      .head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 44px;
+      }
+      .prompt { color: var(--dim); font-size: 13px; }
+      .prompt a { color: var(--blue); font-weight: 400; text-decoration: none; cursor: pointer; }
+      .cursor {
+        display: inline-block;
+        width: 7px; height: 14px;
+        background: var(--blue);
+        vertical-align: -2px;
+        margin-left: 2px;
+        animation: blink 1.1s steps(1) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      h1 {
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0;
+        text-align: right;
+      }
+      h1 .cloud {
+        width: 22px; height: 22px;
+        vertical-align: -0.35em;
+        margin: 0 3px;
+      }
+
+      .grp { margin-bottom: 34px; }
+      .grp h2 {
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        color: var(--blue);
+        margin: 0 0 10px;
+      }
+
+      .row { display: flex; align-items: baseline; }
+      .row .k { color: var(--dim); white-space: nowrap; }
+      .row .dots {
+        flex: 1;
+        border-bottom: 1px dotted var(--dot);
+        margin: 0 8px;
+        transform: translateY(-4px);
+      }
+      .row a {
+        color: var(--ink);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .row a:hover { color: var(--blue); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cursor { animation: none; }
       }
     </style>
   </head>
   <body>
-    <div class="container" style="margin: auto;">
-      <img src="./assets/cloud.svg" width="150" />
-      <h1><a href="/">Mack Hasz in the cloud</a></h1>
-      <div class="all">
-        <div class="stuff">
-          <h4><i>Socials</i></h4>
-          <p><span><strong>LinkedIn</strong></span><a class="link" href="https://www.linkedin.com/in/mack-hasz/">Mack Hasz</a></p>
-          <p><span><strong>Writing</strong></span><a class="link" href="https://hangloo.se">hangloo.se</a></p>
-          <p><span><strong>Travels</strong></span><a class="link" href="https://mack.travel">mack.travel</a></p>
-          <p><span><strong>Twitter</strong></span><a class="link" href="https://twitter.com/beatle_in_a_box">@beatle_in_a_box</a></p>
-          <p><span><strong>GitHub</strong></span><a class="link" href="https://www.github.com/lazyvar/">@lazyvar</a></p>
-          <p><span><strong>GitLab</strong></span><a class="link" href="https://gitlab.com/macnz/">@macnz</a></p>
-          <p><span><strong>Instagram</strong></span><a class="link" href="https://www.instagram.com/juicyripefreshsweet">@juicyripefreshsweet</a></p>
-          <p><span><strong>Chess.com</strong></span><a class="link" href="https://www.chess.com/member/horsey4me/">@horsey4me</a></p>
-          <p><span><strong>lichess</strong></span><a class="link" href="https://lichess.org/@/Objc">@ObjC</a></p>
-          <p><span><strong>Goodreads</strong></span><a class="link" href="https://www.goodreads.com/writeonread">@writeonread</a></p>
-          <p><span><strong>Flickr</strong></span><a class="link" href="https://flickr.com/photos/165507455@N03/">¡mack!</a></p>
-          <p><span><strong>AllTrails</strong></span><a class="link" href="https://www.alltrails.com/members/mack-hasz">Mack Hasz</a></p>
-        </div>
-        <div class="stuff">
-          <h4><i>Apps</i></h4>
-          <p><span><strong>Photo sharing</strong></span><a class="link" href="http://outhere.social">OutHere.social</a></p>
-          <p><span><strong>Writing prompts</strong></span><a class="link" href="https://www.dailyinquirer.me">DailyInquirer.me</a></p>
-          <p><span><strong>Crowd source search</strong></span><a class="link" href="https://www.masschat.co/">Masschat.co</a></p>
-          <p><span><strong>Group fitness challenges</strong></span><a class="link" href="https://www.gymrats.app">GymRats.app</a></p>
-        </div>
+    <div class="wrap">
+      <div class="head">
+        <div class="prompt">~ <a href="/">mack.cloud</a><span class="cursor"></span></div>
+        <h1>mack hasz <svg class="cloud" viewBox="0 0 24 24" fill="none" stroke="#2f74c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg> in the cloud</h1>
+      </div>
+
+      <div class="grp">
+        <h2>SOCIALS</h2>
+        <div class="row"><span class="k">linkedin</span><span class="dots"></span><a href="https://www.linkedin.com/in/mack-hasz/">mack hasz</a></div>
+        <div class="row"><span class="k">writing</span><span class="dots"></span><a href="https://hangloo.se">hangloo.se</a></div>
+        <div class="row"><span class="k">travels</span><span class="dots"></span><a href="https://mack.travel">mack.travel</a></div>
+        <div class="row"><span class="k">twitter</span><span class="dots"></span><a href="https://twitter.com/beatle_in_a_box">@beatle_in_a_box</a></div>
+        <div class="row"><span class="k">github</span><span class="dots"></span><a href="https://www.github.com/lazyvar/">@lazyvar</a></div>
+        <div class="row"><span class="k">gitlab</span><span class="dots"></span><a href="https://gitlab.com/macnz/">@macnz</a></div>
+        <div class="row"><span class="k">instagram</span><span class="dots"></span><a href="https://www.instagram.com/juicyripefreshsweet">@juicyripefreshsweet</a></div>
+        <div class="row"><span class="k">chess.com</span><span class="dots"></span><a href="https://www.chess.com/member/horsey4me/">@horsey4me</a></div>
+        <div class="row"><span class="k">lichess</span><span class="dots"></span><a href="https://lichess.org/@/Objc">@objc</a></div>
+        <div class="row"><span class="k">goodreads</span><span class="dots"></span><a href="https://www.goodreads.com/writeonread">@writeonread</a></div>
+        <div class="row"><span class="k">flickr</span><span class="dots"></span><a href="https://flickr.com/photos/165507455@N03/">¡mack!</a></div>
+        <div class="row"><span class="k">alltrails</span><span class="dots"></span><a href="https://www.alltrails.com/members/mack-hasz">mack hasz</a></div>
+      </div>
+
+      <div class="grp">
+        <h2>APPS</h2>
+        <div class="row"><span class="k">outhere.social</span><span class="dots"></span><a href="http://outhere.social">photo sharing</a></div>
+        <div class="row"><span class="k">dailyinquirer.me</span><span class="dots"></span><a href="https://www.dailyinquirer.me">writing prompts</a></div>
+        <div class="row"><span class="k">masschat.co</span><span class="dots"></span><a href="https://www.masschat.co/">crowd-source search</a></div>
+        <div class="row"><span class="k">gymrats.app</span><span class="dots"></span><a href="https://www.gymrats.app">group fitness</a></div>
       </div>
     </div>
   </body>
