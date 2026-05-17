@@ -24,6 +24,7 @@
         --dim: #9aa7b2;
         --blue: #2f74c0;
         --dot: #dbe1e7;
+        --hl: #e4e9ef;
       }
       * { box-sizing: border-box; }
       body {
@@ -77,7 +78,17 @@
         margin: 0 0 10px;
       }
 
-      .row { display: flex; align-items: baseline; }
+      .row {
+        display: flex;
+        align-items: baseline;
+        text-decoration: none;
+        color: var(--ink);
+        padding: 3px 8px;
+        margin: 0 -8px;
+        border-radius: 5px;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.12s ease;
+      }
       .row .k { color: var(--dim); white-space: nowrap; }
       .row .dots {
         flex: 1;
@@ -85,15 +96,28 @@
         margin: 0 8px;
         transform: translateY(-4px);
       }
-      .row a {
-        color: var(--ink);
-        text-decoration: none;
-        white-space: nowrap;
+      .row .v { white-space: nowrap; }
+      .row:active { background: var(--hl); }
+      @media (hover: hover) {
+        .row:hover { background: var(--hl); }
+        .row:hover .k { color: var(--ink); }
+        .row:hover .v { color: var(--blue); }
       }
-      .row a:hover { color: var(--blue); }
+
+      @media (max-width: 600px) {
+        .wrap { padding: 6vh 20px 12vh; }
+        .head {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 8px;
+          margin-bottom: 36px;
+        }
+        h1 { text-align: left; }
+      }
 
       @media (prefers-reduced-motion: reduce) {
         .cursor { animation: none; }
+        .row { transition: none; }
       }
     </style>
   </head>
@@ -106,26 +130,26 @@
 
       <div class="grp">
         <h2>SOCIALS</h2>
-        <div class="row"><span class="k">linkedin</span><span class="dots"></span><a href="https://www.linkedin.com/in/mack-hasz/">mack hasz</a></div>
-        <div class="row"><span class="k">writing</span><span class="dots"></span><a href="https://hangloo.se">hangloo.se</a></div>
-        <div class="row"><span class="k">travels</span><span class="dots"></span><a href="https://mack.travel">mack.travel</a></div>
-        <div class="row"><span class="k">twitter</span><span class="dots"></span><a href="https://twitter.com/beatle_in_a_box">@beatle_in_a_box</a></div>
-        <div class="row"><span class="k">github</span><span class="dots"></span><a href="https://www.github.com/lazyvar/">@lazyvar</a></div>
-        <div class="row"><span class="k">gitlab</span><span class="dots"></span><a href="https://gitlab.com/macnz/">@macnz</a></div>
-        <div class="row"><span class="k">instagram</span><span class="dots"></span><a href="https://www.instagram.com/juicyripefreshsweet">@juicyripefreshsweet</a></div>
-        <div class="row"><span class="k">chess.com</span><span class="dots"></span><a href="https://www.chess.com/member/horsey4me/">@horsey4me</a></div>
-        <div class="row"><span class="k">lichess</span><span class="dots"></span><a href="https://lichess.org/@/Objc">@objc</a></div>
-        <div class="row"><span class="k">goodreads</span><span class="dots"></span><a href="https://www.goodreads.com/writeonread">@writeonread</a></div>
-        <div class="row"><span class="k">flickr</span><span class="dots"></span><a href="https://flickr.com/photos/165507455@N03/">¡mack!</a></div>
-        <div class="row"><span class="k">alltrails</span><span class="dots"></span><a href="https://www.alltrails.com/members/mack-hasz">mack hasz</a></div>
+        <a class="row" href="https://www.linkedin.com/in/mack-hasz/"><span class="k">linkedin</span><span class="dots"></span><span class="v">mack hasz</span></a>
+        <a class="row" href="https://hangloo.se"><span class="k">writing</span><span class="dots"></span><span class="v">hangloo.se</span></a>
+        <a class="row" href="https://mack.travel"><span class="k">travels</span><span class="dots"></span><span class="v">mack.travel</span></a>
+        <a class="row" href="https://twitter.com/beatle_in_a_box"><span class="k">twitter</span><span class="dots"></span><span class="v">@beatle_in_a_box</span></a>
+        <a class="row" href="https://www.github.com/lazyvar/"><span class="k">github</span><span class="dots"></span><span class="v">@lazyvar</span></a>
+        <a class="row" href="https://gitlab.com/macnz/"><span class="k">gitlab</span><span class="dots"></span><span class="v">@macnz</span></a>
+        <a class="row" href="https://www.instagram.com/juicyripefreshsweet"><span class="k">instagram</span><span class="dots"></span><span class="v">@juicyripefreshsweet</span></a>
+        <a class="row" href="https://www.chess.com/member/horsey4me/"><span class="k">chess.com</span><span class="dots"></span><span class="v">@horsey4me</span></a>
+        <a class="row" href="https://lichess.org/@/Objc"><span class="k">lichess</span><span class="dots"></span><span class="v">@objc</span></a>
+        <a class="row" href="https://www.goodreads.com/writeonread"><span class="k">goodreads</span><span class="dots"></span><span class="v">@writeonread</span></a>
+        <a class="row" href="https://flickr.com/photos/165507455@N03/"><span class="k">flickr</span><span class="dots"></span><span class="v">¡mack!</span></a>
+        <a class="row" href="https://www.alltrails.com/members/mack-hasz"><span class="k">alltrails</span><span class="dots"></span><span class="v">mack hasz</span></a>
       </div>
 
       <div class="grp">
         <h2>APPS</h2>
-        <div class="row"><span class="k">outhere.social</span><span class="dots"></span><a href="http://outhere.social">photo sharing</a></div>
-        <div class="row"><span class="k">dailyinquirer.me</span><span class="dots"></span><a href="https://www.dailyinquirer.me">writing prompts</a></div>
-        <div class="row"><span class="k">masschat.co</span><span class="dots"></span><a href="https://www.masschat.co/">crowd-source search</a></div>
-        <div class="row"><span class="k">gymrats.app</span><span class="dots"></span><a href="https://www.gymrats.app">group fitness</a></div>
+        <a class="row" href="http://outhere.social"><span class="k">outhere.social</span><span class="dots"></span><span class="v">photo sharing</span></a>
+        <a class="row" href="https://www.dailyinquirer.me"><span class="k">dailyinquirer.me</span><span class="dots"></span><span class="v">writing prompts</span></a>
+        <a class="row" href="https://www.masschat.co/"><span class="k">masschat.co</span><span class="dots"></span><span class="v">crowd-source search</span></a>
+        <a class="row" href="https://www.gymrats.app"><span class="k">gymrats.app</span><span class="dots"></span><span class="v">group fitness</span></a>
       </div>
     </div>
   </body>
