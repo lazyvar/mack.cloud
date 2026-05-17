@@ -11,9 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mack Hasz in the cloud</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preload" href="/static/fonts/source-serif-pro-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/source-serif-pro-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
@@ -21,6 +20,27 @@
     <meta name="theme-color" content="#ffffff">
 
     <style>
+      @font-face {
+        font-family: 'Source Serif Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url(/static/fonts/source-serif-pro-400.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Source Serif Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: block;
+        src: url(/static/fonts/source-serif-pro-700.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Varela Round';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url(/static/fonts/varela-round-400.woff2) format('woff2');
+      }
       h1 a { text-decoration: none; color: inherit; }
       h1 a:hover { text-decoration: underline; color: inherit; }
       p a { text-decoration: underline dotted; color: rgba(0, 0, 0, 0.85); }
